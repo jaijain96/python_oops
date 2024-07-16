@@ -167,49 +167,49 @@
 # print(f"(x is not y) is (not (x is y)): {(x is not y) is (not (x is y))}")
 # print(f"(x is not y) == (not (x is y)): {(x is not y) == (not (x is y))}")
 
-from operator import attrgetter, itemgetter
+# from operator import attrgetter, itemgetter
 
-dct = {"hello": 2, "bob" : 6, "world" : 5, "ab" : 6}
+# dct = {"hello": 2, "bob" : 6, "world" : 5, "ab" : 6}
 
-def funct0(key):
-    return (key, dct[key])
+# def funct0(key):
+#     return (key, dct[key])
 
-def funct1(key):
-    return (dct[key], key)
+# def funct1(key):
+#     return (dct[key], key)
 
-def comparator(key):
-    return dct[key]
+# def comparator(key):
+#     return dct[key]
 
-print(list(map(funct0, sorted(dct, key=lambda dct_key : dct[dct_key]))))
-print(dict(map(funct1, sorted(dct, key=comparator))))
+# print(list(map(funct0, sorted(dct, key=lambda dct_key : dct[dct_key]))))
+# print(dict(map(funct1, sorted(dct, key=comparator))))
 
-tuples = list(zip(dct.keys(), dct.values()))
-print(f"tuples: {tuples}")
-print(sorted(tuples, key=itemgetter(1,0)))
+# tuples = list(zip(dct.keys(), dct.values()))
+# print(f"tuples: {tuples}")
+# print(sorted(tuples, key=itemgetter(1,0)))
 
-# print([(lambda key : (key, dct[key])) for key in sorted(dct)])
+# # print([(lambda key : (key, dct[key])) for key in sorted(dct)])
 
-from time import perf_counter_ns
-import sys
+# from time import perf_counter_ns
+# import sys
 
-sys.setrecursionlimit(10000)
-sys.set_int_max_str_digits(100000)
+# sys.setrecursionlimit(10000)
+# sys.set_int_max_str_digits(100000)
 
-total = 100
-lst = [None] * (total + 1)
-# print(lst[:11])
-lst[0] = 1
+# total = 100
+# lst = [None] * (total + 1)
+# # print(lst[:11])
+# lst[0] = 1
 
-def fact(n):
-    # print(n)
-    if n < 1:
-        return 1
-    else:
-        if lst[n] is None:
-            # print("goes in if")
-            lst[n] = (n * fact(n - 1))
-        return lst[n] 
-        # return (n * fact(n - 1))
+# def fact(n):
+#     # print(n)
+#     if n < 1:
+#         return 1
+#     else:
+#         if lst[n] is None:
+#             # print("goes in if")
+#             lst[n] = (n * fact(n - 1))
+#         return lst[n] 
+#         # return (n * fact(n - 1))
 
 # begin = perf_counter_ns()
 # for i in range(total):
@@ -219,11 +219,72 @@ def fact(n):
 # print(lst[:total + 1])
 
 
-import package.decorators as decorators
+# import package.decorators as decorators
 
-# fact = decorators.repeat(num_times=5)
+# from dataclasses import dataclass
 
-# print(fact(10))
+# @dataclass
+# class A:
+#     x: int
+#     y: str
 
 
+# a = A(5, "foo")
+# print(a)
 
+# from collections import namedtuple
+
+# Person = namedtuple("Person", "name age")
+# p0 = Person("foo", "bar")
+# print(p0)
+
+
+# import asyncio
+
+
+# async def coro(idx):
+#     print(idx)
+#     # time.sleep(2)
+#     await asyncio.sleep(2)
+#     # for i in range(5):
+#     #     print(f"{idx}: {i}")
+
+# async def spawner():
+#     # coro_list = []
+#     for idx in range(5):
+#         await coro(idx)
+#         # coro_list.append(coro(idx))
+#     # await asyncio.gather(*coro_list)
+
+# import time
+
+# begin = time.perf_counter()
+# asyncio.run(spawner())
+# print(f"time taken: {time.perf_counter() - begin}")
+
+
+def create_multipliers():
+    multipliers = []
+
+    for i in range(5):
+        def multiplier(x):
+            return i * x
+        multipliers.append(multiplier)
+
+    return multipliers
+
+for multiplier in create_multipliers():
+    print(multiplier(2))
+
+def create_multipliers():
+    multipliers = []
+
+    for i in range(5):
+        def multiplier(x, j=i):
+            return j * x
+        multipliers.append(multiplier)
+
+    return multipliers
+
+for multiplier in create_multipliers():
+    print(multiplier(2))
