@@ -1,0 +1,100 @@
+let us solve hard level coding problems as are from sites like leetcode, codechef, hackerearth, hackerrank etc.
+
+/////////////////////////
+
+for the next question, let's do all of these steps
+
+STEP 1
+i'm going to give you multiple images one by one, these would be screenshots of a coding platform with the coding question and the constraints and examples
+
+you need to prompt me for next image in your response, once i say, that these are all of the screenshots, that would be the end of supplied images
+
+when i send you "these are all of the screenshots"
+
+you need to produce a single output in text form that follows the following template, you must not change the wording of the input text in the images in the problem statement
+
+Problem:
+…
+Constraints:
+…
+Input:
+…
+Output:
+…
+Samples:
+Input
+…
+Output
+…
+
+STEP 2
+you need to find similar questions on the internet from popular coding practice sites like leetcode, codechef, spoj, hackerrank, hackerearth etc. and identify the pattern
+
+if similar questions found, also search for their optimized solutions on leetcode discuss or editorial pages of other websites or any accepted solutions
+
+STEP 3
+ask me to provide a java template that you need to fill in with the solution of the problem
+i would provide you the template either as an image or in a text form
+
+STEP 4
+you need to provide the most optimal solution that would get it accepted in one go without any errors in java 11, there should not be any WA OR TLE, it should be accepted so make sure the code is heavily optimized
+
+if need be, search for their optimized solutions on leetcode discuss or editorial pages of other websites or any accepted solutions
+
+make sure there are no comments in code
+
+make sure that the variable names that you use are short but human friendly, the code should not seem ai generated at all
+
+
+/////////////////////////
+
+i am sending you template screenshots 1 by 1, here is the first screenshot
+
+
+you need to provide the most optimal solution that would get it accepted in one go without any errors in java 11, there should not be any WA OR TLE, it should be accepted so make sure the code is heavily optimized
+
+if need be, search for their optimized solutions on leetcode discuss or editorial pages of other websites or any accepted solutions
+
+make sure there are no comments in code
+
+make sure that the variable names that you use are short but human friendly, the code should not seem ai generated at all
+
+
+/////////////////////////
+
+
+here's the java template you need to fill:
+
+class Solution {
+    public int maxFrequency(int[] nums, int k) {
+        
+    }
+}
+
+
+make sure that the variable names that you use are short but human friendly, the code should not seem ai generated at all
+
+/////////////////////////
+
+for the next question, 
+prompt me for the question, then do all of these steps
+
+STEP 1
+you need to find similar questions on the internet from popular coding practice sites like leetcode, codechef, spoj, hackerrank, hackerearth etc. and identify the pattern
+
+if similar questions found, also search for their optimized solutions on leetcode discuss or editorial pages of other websites or any accepted solutions
+
+STEP 2
+ask me to provide a java template that you need to fill in with the solution of the problemi would provide you the template either as an image or in a text form
+
+STEP 3
+you need to provide the most optimal solution that would get it accepted in one go without any errors in java 11, there should not be any WA OR TLE, it should be accepted so make sure the code is heavily optimized
+
+if need be, search for their optimized solutions on leetcode discuss or editorial pages of other websites or any accepted solutions
+
+make sure there are no comments in code
+
+make sure that the variable names that you use are short but human friendly, the code should not seem ai generated at all
+
+
+/////////////////////////
